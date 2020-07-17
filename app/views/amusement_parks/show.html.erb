@@ -1,0 +1,8 @@
+<h1>Welcome to <%= @amusement_park.name %></h1>
+<p>Admissions: <%= number_to_currency(@amusement_park.admission_price) %><p/>
+
+<ol>
+  <% @amusement_park.rides.each do |ride| %>
+    <li><%= ride.name %></li>
+  <% end %>
+</ol>

@@ -208,6 +208,7 @@
           null,
           null,
           1,
+          1,
           null,
           null
         ]
@@ -240,11 +241,34 @@
       "/Users/ryn/turing/2module/mid_mod/b2-mid-mod/app/models/amusement_park.rb": {
         "lines": [
           1,
-          null,
+          1,
           null
         ]
       },
       "/Users/ryn/turing/2module/mid_mod/b2-mid-mod/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/ryn/turing/2module/mid_mod/b2-mid-mod/app/models/ride.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/ryn/turing/2module/mid_mod/b2-mid-mod/app/controllers/amusement_parks_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ryn/turing/2module/mid_mod/b2-mid-mod/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -266,15 +290,8 @@
           null,
           null
         ]
-      },
-      "/Users/ryn/turing/2module/mid_mod/b2-mid-mod/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1595000305
+    "timestamp": 1595001348
   }
 }

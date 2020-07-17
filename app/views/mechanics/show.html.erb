@@ -3,7 +3,9 @@
 
 <p>Current rides they’re working on: </p>
 <% @mechanic.rides.each do |ride| %>
-<%= ride.name %>
+<ul>
+  <li><%= ride.name %></li>
+</ul>
 <% end %>
 
 <p>Add a ride to workload: </p>

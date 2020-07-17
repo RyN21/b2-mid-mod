@@ -7,7 +7,11 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
+  <nav>
+    <%= link_to "Rides", '/rides' %>
+    <%= link_to "Parks", '/amusement_parks' %>
+    <%= link_to "Mechanics", '/mechanics' %>
+  </nav>
   <body>
     <%= yield %>
   </body>

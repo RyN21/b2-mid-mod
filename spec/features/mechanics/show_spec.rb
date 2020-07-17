@@ -32,16 +32,13 @@ RSpec.describe "Mechanic show page" do
 
     expect(page).to have_content("Add a ride to workload:")
 
-    fill_in :ride, with: "4"
+    fill_in :ride_id, with: @twister2.id
 
-    click_on "Add Ride"
-
-    rides_they_are_working_on = "Current rides they’re working on:
-    Boomerang
-    Mind Eraser
-    Twister II"
+    click_button "Add Ride"
 
     expect(current_path).to eq("/mechanics/#{@joe.id}")
-    expect(page).to have_content(rides_they_are_working_on)
+    expect(page).to have_content("Boomerang")
+    expect(page).to have_content("Mind Eraser")
+    expect(page).to have_content("Twister II")
   end
 end

@@ -16,16 +16,16 @@ RSpec.describe "Amusement Park show page" do
     expect(page).to have_content("Six Flags")
     expect(page).to have_content("Admissions: $25.00")
   end
-  #
-  # it "displays the names of all the rides in alphabetical order" do
-  #
-  #   visit "/amusement_parks/#{amusement_parks.id}"
-  #
-  #   expect(page).to have_content("Boomerang")
-  #   expect(page).to have_content("Mind Eraser")
-  #   expect(page).to have_content("Tower of Doom")
-  #   expect(page).to have_content("Twister II")
-  # end
+
+  it "displays the names of all the rides in alphabetical order" do
+
+    visit "/amusement_parks/#{@park1.id}"
+
+    expect(page).to have_content("Boomerang")
+    expect(page).to have_content("Mind Eraser")
+    expect(page).to have_content("Tower of Doom")
+    expect(page).to have_content("Twister II")
+  end
   # it "displays the average thrill rating of the amusement park's rides" do
   #
   #   visit "/amusement_parks/#{amusement_parks.id}"

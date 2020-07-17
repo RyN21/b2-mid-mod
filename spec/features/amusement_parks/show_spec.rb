@@ -26,10 +26,10 @@ RSpec.describe "Amusement Park show page" do
     expect(page).to have_content("Tower of Doom")
     expect(page).to have_content("Twister II")
   end
-  # it "displays the average thrill rating of the amusement park's rides" do
-  #
-  #   visit "/amusement_parks/#{amusement_parks.id}"
-  #
-  #   expect(page).to have_content("Average Thrill Rating of Rides: 8.5/10")
-  # end
+  it "displays the average thrill rating of the amusement park's rides" do
+
+    visit "/amusement_parks/#{@park1.id}"
+
+    expect(page).to have_content("Average Thrill Rating of Rides: 8.5/10")
+  end
 end

@@ -2,11 +2,12 @@
 <p>Admissions: <%= number_to_currency(@amusement_park.admission_price) %><p/>
 
 <section>
-  <p>Rides: <% @amusement_park.alphabetical_order.each do |ride| %></p><br>
-    <ol>
-      <li><%= ride.name %></li>
-    </ol>
-  <% end %>
+  <p>Rides:</p>
+  <ol>
+    <% @amusement_park.alphabetical_order.each do |ride| %>
+        <li><%= ride.name %></li>
+    <% end %>
+  </ol>
 </section>
 
 <p>Average Thrill Rating of Rides: <%= @amusement_park.average_thrill_rating %>/10"</p>

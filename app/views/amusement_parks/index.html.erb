@@ -2,6 +2,6 @@
 
 <% @amusement_parks.each do |park| %>
 <ul>
-  <li><%= park.name %></li>
+  <li><%= link_to "#{park.name}", "/amusement_parks/#{park.id}" %></li>
 </ul>
 <% end %>

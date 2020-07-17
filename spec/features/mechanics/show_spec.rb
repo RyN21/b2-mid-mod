@@ -9,6 +9,10 @@ RSpec.describe "Mechanic show page" do
     @tower_of_doom = @park1.rides.create!(name: "Tower of Doom", thrill_rating: 10)
     @mind_eraser = @park1.rides.create!(name: "Mind Eraser", thrill_rating: 9)
     @twister2 = @park1.rides.create!(name: "Twister II", thrill_rating: 7)
+    MechanicRide.create(ride: @boomerang, mechanic: @joe)
+    MechanicRide.create(ride: @mind_eraser, mechanic: @joe)
+    MechanicRide.create(ride: @boomerang, mechanic: @sam)
+    MechanicRide.create(ride: @twister2, mechanic: @sam)
 
 
   end
@@ -18,12 +22,8 @@ RSpec.describe "Mechanic show page" do
 
     expect(page).to have_content("Mechanic: Joe Bob")
     expect(page).to have_content("Years of Experience: 7")
-
-    rides_they_are_working_on = "Current rides they’re working on:
-    Boomerang
-    Mind Eraser"
-
-    expect(page).to have_content(rides_they_are_working_on)
+    expect(page).to have_content("Boomerang")
+    expect(page).to have_content("Mind Eraser")
   end
 
   it "has a form to add a ride to their workload" do
@@ -31,7 +31,7 @@ RSpec.describe "Mechanic show page" do
     visit "/mechanics/#{@joe.id}"
 
     expect(page).to have_content("Add a ride to workload:")
-    
+
     fill_in :ride, with: "4"
 
     click_on "Add Ride"
